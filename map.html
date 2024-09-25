@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Карта Гомеля</title>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<script type="text/javascript">
+    ymaps.ready(init);
+
+    function init() {
+        var myMap = new ymaps.Map("map", {
+            center: [52.425163, 31.015039], // Центр карты на Гомель
+            zoom: 12,
+            controls: ['zoomControl']
+        });
+
+        var places = [
+            {
+                coords: [52.399763, 31.020810],
+                name: "Монументальный комплекс воинам, павшим в боях за Родину.",
+                description: "Описание братского захоронения воинов на Новобелицком кладбище",
+                url: "stars/Братское захоронение воинов на Новобелицком кладбище.html"
+            },
+
+
+            {
+                coords: [52.395031, 31.030965],
+                name: "Брискин С.В.",
+                description: "Описание мемориала Брискин",
+                url: "stars/Брискин.html"
+            },
+            {
+                coords: [52.39506, 31.03112],
+                name: "Маркелов В.А.",
+                description: "Описание Маркелова",
+                url: "stars/Маркелов.html"
+            },
+
+
+            {
+                coords: [52.399921, 31.021395],
+                name: "Воинский участок Новобелицкого гражданского кладбища. Стела 'Побег из ада'.",
+                description: "Описание Немченко",
+                url: "stars/Немченко.html"
+            },
+            {
+                coords: [52.390356, 31.029399],
+                name: "Калач Б.Ф.",
+                description: "Описание Калач",
+                url: "stars/Калач.html"
+            },
+            
+
+
+            {
+                coords: [52.390276, 31.029394],
+                name: "Шандалов Ю.А.",
+                description: "Описание Шандалова",
+                url: "stars/Шандалов.html"
+            },
+            {
+                coords: [52.390415, 31.029402],
+                name: "Калеников И.Е.",
+                description: "Описание Каленникова",
+                url: "stars/Каленников.html"
+            },
+            {
+                coords: [52.390380, 31.029399],
+                name: "Склезнев Г.М.",
+                description: "Описание Склезнева",
+                url: "stars/Склезнев.html"
+            },
+            {
+                coords: [52.390327, 31.029399],
+                name: "Поляков И.Е.",
+                description: "Описание Полякова",
+                url: "stars/Поляков.html"
+            },
+
+
+
+
+
+
+
+            {
+                coords: [52.387714, 31.029933],
+                name: "Головачев П.Я.",
+                description: "Описание Головачева",
+                url: "stars/Голавачёва.html"
+            },
+
+
+
+
+            {
+                coords: [52.385949, 31.020413],
+                name: "Стела работникам предприятия, участникам Великой Отечественной войны.",
+                description: "Описание стеллы",
+                url: "stars/Стелла.html"
+            },
+            {
+                coords: [52.381340, 31.030387],
+                name: "Рокоссовский К.К.",
+                description: "Описание Рокоссовского",
+                url: "stars/Рокоссовский.html"
+            },
+            {
+                coords: [52.371519, 31.029260],
+                name: "Зайцев И.С.",
+                description: "Описание Зайцева",
+                url: "stars/Зайцев.html"
+            },
+
+
+
+            {
+                coords: [52.320827, 30.977341],
+                name: "Военно-исторический мемориал «Партизанская криничка»",
+                description: "Описание Зайцева",
+                url: "stars/Зайцев.html"
+            },
+            {
+                coords: [52.349331, 31.030103],
+                name: "Обелиск в честь воинов Белорусского фронта - освободителей города",
+                description: "Описание Зайцева",
+                url: "stars/Зайцев.html"
+            }, 
+            {
+                coords: [52.351210, 31.031087],
+                name: "Памятник жертвам Холокоста",
+                description: "Описание Зайцева",
+                url: "stars/Зайцев.html"
+            }
+
+
+
+        ];
+
+        places.forEach(function(place) {
+            var placemark = new ymaps.Placemark(place.coords, {
+                hintContent: place.name,
+                balloonContent: `<a href="${place.url}">${place.name}</a><br>${place.description}`
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: 'image/star.png', // Замените на путь к вашей иконке звезды
+                iconImageSize: [30, 42],
+                iconImageOffset: [-15, -42]
+            });
+
+            myMap.geoObjects.add(placemark);
+        });
+    }
+</script>
+</body>
+</html>

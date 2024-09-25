@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+.button img{
+	position: fixed;
+	z-index: 2;
+}
+.st1 img {
+	position: absolute;
+	width: 35px;
+	z-index: 2;
+	top:1370px;
+	left:900px;
+}
+
+.st2 img {
+	position: absolute;
+	width: 35px;
+	z-index: 2;
+	top: 1320px;
+	left: 880px;
+}
+
+.st3 img {
+	position: absolute;
+	width: 35px;
+	z-index: 2;
+	top: 455px;
+	left: 1650px;
+}
+
+.st4 img {
+	position: absolute;
+	width: 35px;
+	z-index: 2;
+	top: 470px;
+	left: 1610px;
+}
+
+.st5 img {
+	position: absolute;
+	width: 35px;
+	z-index: 2;
+	top: 610px;
+	left: 2420px;
+}
+
+.st6 img {
+	position: absolute;
+	width: 35px;
+	z-index: 2;
+	top: 610px;
+	left: 2450px;
+}
+
+.st7 img {
+	position: absolute;
+	width: 35px;
+	z-index: 2;
+	top: 610px;
+	left: 2480px;
+}
+
+.st8 img {
+	position: absolute;
+	width: 35px;
+	z-index: 2;
+	top: 580px;
+	left: 2465px;
+}
+
+.st9 img {
+	position: absolute;
+	width: 35px;
+	z-index: 2;
+	top: 580px;
+	left: 2435px;
+}
+
+.st10 img {
+	position: absolute;
+	width: 35px;
+	z-index: 2;
+	top: 530px;
+	left: 2750px;
+}
+
+.st11 img {
+	position: absolute;
+	width: 35px;
+	z-index: 2;
+	top: 1380px;
+	left: 3150px;
+}
+
+.st12 img {
+	position: absolute;
+	width: 35px;
+	z-index: 2;
+	top: 520px;
+	left: 4000px;
+}
+
+.st13 img {
+	position: absolute;
+	width: 35px;
+	z-index: 2;
+	top: 580px;
+	left: 5220px;
+}
